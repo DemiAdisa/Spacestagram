@@ -1,8 +1,8 @@
-# About this project
+# About This Project
 
 This project is my submission to the Shopify 2022 Summer Internship Program
 
-# What does it do?
+# What Does It Do?
 
 It is a simple frontend web application which makes use of APIs provided by NASA, Semantic-UI (A UI Library for react components) and React.js to model a small Instagram like App (Hence the Name Spacstagram)
 
