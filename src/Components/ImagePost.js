@@ -1,5 +1,9 @@
 import React from "react";
 
+/*This is a child component of App.js
+It serves as a Card to hold the details about the pictures 
+returned by the api
+*/
 class ImagePost extends React.Component {
   constructor(props) {
     super(props);
@@ -13,13 +17,12 @@ class ImagePost extends React.Component {
       buttonType: "ui button",
     };
 
+    //Bind onLikeClick Function to ImagePost Class
     this.onLikeClick = this.onLikeClick.bind(this);
   }
 
   //Button Click Callback Function
   onLikeClick() {
-    console.log("I was clicked");
-
     //Gives the Like Button a Little Animation using React State
     if (!this.state.isLiked) {
       this.setState({
