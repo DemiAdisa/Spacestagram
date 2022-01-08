@@ -47,14 +47,14 @@ class ImagePost extends React.Component {
         </div>
 
         <div className="ui content">
-          <div className="full name">
+          <div className="title">
             <label className="ui label">
               Title: Picture captured by NASA's {this.props.rover} Rover using
               its {this.props.fullName}
             </label>
           </div>
 
-          <div className="camera name">
+          <div className="rover status">
             <label className="ui label">
               Rover Status: {this.props.roverStatus}
             </label>
