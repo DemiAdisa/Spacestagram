@@ -41,10 +41,11 @@ class App extends React.Component {
             this.state.response.map((image) => {
               return (
                 <ImagePost
-                  camName={image.camera.name}
+                  roverStatus={image.rover.status}
                   fullName={image.camera.full_name}
                   imgSrc={image.img_src}
                   date={image.earth_date}
+                  rover={image.rover.name}
                 />
               );
             })

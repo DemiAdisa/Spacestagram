@@ -2,7 +2,7 @@ import React from "react";
 
 /*This is a child component of App.js
 It serves as a Card to hold the details about the pictures 
-returned by the api
+returned by the API
 */
 class ImagePost extends React.Component {
   constructor(props) {
@@ -40,8 +40,6 @@ class ImagePost extends React.Component {
   }
 
   render() {
-    //console.log(this.props.imageData);
-
     return (
       <div className="ui card" style={{ margin: "15px auto" }}>
         <div className="image">
@@ -49,18 +47,23 @@ class ImagePost extends React.Component {
         </div>
 
         <div className="ui content">
-          <div className="camera name">
+          <div className="full name">
             <label className="ui label">
-              Camera Name: {this.props.camName}
+              Title: Picture captured by NASA's {this.props.rover} Rover using
+              its {this.props.fullName}
             </label>
           </div>
 
-          <div className="full name">
-            <label className="ui label">Full Name: {this.props.fullName}</label>
+          <div className="camera name">
+            <label className="ui label">
+              Rover Status: {this.props.roverStatus}
+            </label>
           </div>
 
           <div className="picture date">
-            <label className="ui label">Date: {this.props.date}</label>
+            <label className="ui label">
+              Date of Capture: {this.props.date}
+            </label>
           </div>
         </div>
 
