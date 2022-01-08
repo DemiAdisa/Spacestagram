@@ -12,26 +12,43 @@ class App extends React.Component {
         "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2&page=1&api_key=ZkTwfVmLLAtZJ2RV1b4Q74fXfz6nBfxYQnhMEIG0",
       response: [],
     };
+  }
 
+  async componentDidMount() {
     //Make the Request to API
-    axios.get(this.state.apiUrl).then((res) => {
-      this.setState({ response: res });
+    await axios.get(this.state.apiUrl).then((res) => {
+      this.setState({ response: res.data.photos });
     });
   }
 
   render() {
     return (
-      <div
-        className="ui container"
-        styles={{ backgroundImage: "public/background-image.jpg" }}
-      >
+      <div className="ui container">
         <div className="ui feed" style={{ textAlign: "center" }}>
           <h1 className="ui bold header" style={{ color: "white" }}>
             Spacestagram
           </h1>
-          <span style={{ color: "white" }}>Brought to you by NASA!</span>
+          <span style={{ color: "white" }}>
+            Brought to you by NASA's Image API!
+          </span>
 
-          <ImagePost contentData={this.state.response} />
+          {
+            /*
+            Using the javascript map function,
+            we parse through the JSON retuned by the API 
+            and use the ImagePost component to render it  
+            */
+            this.state.response.map((image) => {
+              return (
+                <ImagePost
+                  camName={image.camera.name}
+                  fullName={image.camera.full_name}
+                  imgSrc={image.img_src}
+                  date={image.earth_date}
+                />
+              );
+            })
+          }
         </div>
       </div>
     );

@@ -8,8 +8,6 @@ class ImagePost extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.contentData);
-
     this.state = {
       isLiked: false,
       buttonValue: "Like",
@@ -42,14 +40,28 @@ class ImagePost extends React.Component {
   }
 
   render() {
+    //console.log(this.props.imageData);
+
     return (
       <div className="ui card" style={{ margin: "15px auto" }}>
         <div className="image">
-          <img src="/images/avatar2/large/kristy.png" />
+          <img src={this.props.imgSrc} alt="Image From Nasa" />
         </div>
 
         <div className="ui content">
-          <p>Description</p>
+          <div className="camera name">
+            <label className="ui label">
+              Camera Name: {this.props.camName}
+            </label>
+          </div>
+
+          <div className="full name">
+            <label className="ui label">Full Name: {this.props.fullName}</label>
+          </div>
+
+          <div className="picture date">
+            <label className="ui label">Date: {this.props.date}</label>
+          </div>
         </div>
 
         <button className={this.state.buttonType} onClick={this.onLikeClick}>
