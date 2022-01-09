@@ -1,6 +1,6 @@
 # About This Project
 
-This project is my submission to the Shopify 2022 Summer Internship Program
+This project is my submission to the Shopify 2022 Summer Internship Program. To view the technical requirements, visit https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#
 
 # What Does It Do?
 
