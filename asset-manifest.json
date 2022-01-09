@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/Spacestagram/static/js/main.bf536481.js",
+    "index.html": "/Spacestagram/index.html",
+    "main.bf536481.js.map": "/Spacestagram/static/js/main.bf536481.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bf536481.js"
+  ]
+}
