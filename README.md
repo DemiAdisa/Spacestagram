@@ -12,10 +12,11 @@ You can view a demo here at https://demiadisa.github.io/Spacestagram/
 
 # Features
 
-This simple application features:
+This web application features:
 
 1. A simple Like Button (It turns red when liked and loses the color when unliked)
 2. A space themed background
+3. API connection and JSON Parsing
 
 # Getting Started with Create React App
 
